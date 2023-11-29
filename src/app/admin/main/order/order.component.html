@@ -1,0 +1,624 @@
+<div class="big" id="big">
+  <div class="container">
+    <h6 class="Products">Orders</h6>
+    <div class="row" style="width:100%;margin-top:60;">
+      <div class="col-4">
+        <i *ngIf="searchMode" class="fa fa-arrow-left" (click)="return()" style="font-size: 30px;"></i>
+      </div>
+      <div class="col-6">
+        <form #searchForm="ngForm" (ngSubmit)="searchForm.form.valid && search(searchForm)">
+          <input type="text" class="inp" placeholder="Search By OrderId" name="search" ngModel required >
+          <i class="fa fa-search search" aria-hidden="true" (click)="search(searchForm)"></i>
+        </form>
+      </div>
+      
+  </div>
+    <p class="viewitem">View All</p>
+
+    <div class="row">
+      <div class="col-2">
+        <p class="everything">Customer</p>
+      </div>
+      <div class="col-2">
+        <p class="everything">Order ID</p>
+      </div>
+      <div class="col-2">
+        <p class="everything">Product</p>
+      </div>
+      <div class="col-2">
+        <p class="everything">Payment Mode</p>
+      </div>
+      <div class="col-2">
+        <p class="everything">Status</p>
+      </div>
+      <div class="col-2">
+        <p class="everything">Action</p>
+      </div>
+    </div>
+
+
+
+
+    <div *ngIf="!searchMode">
+      <div class="row" *ngFor="let order of orders; let i = index;">
+        <div class="col-2">
+          <div class="row">
+            <div class="col-2">
+              <img src="assets/images/Rectangle 821.png" class="biggy">
+            </div>
+            <div class="col-10">
+              <p class="namey">{{order?.owner.name }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <p class="orderid">{{order?.pk_id}}</p>
+        </div>
+        <div class="col-2">
+          <button class="btn btn-outline-warning" data-toggle="modal" [attr.data-target]="'#productModal'+i">View</button>
+        </div>
+        <div class="col-2">
+          <p class="orderid">{{order?.deliveryMethod}}</p>
+        </div>
+        <div class="col-2">
+          <p class="pricey">{{order?.status}}</p>
+        </div>
+        <div class="col-2">
+          <button class="btn1" data-toggle="modal" [attr.data-target]="'#exampleModalCenter'+i">UPDATE</button>
+        </div>
+  
+  
+        <!-- Modal -->
+        <div class="modal fade" [id]="'exampleModalCenter'+i" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="row" style="margin-top:18%;">
+                  <div class="col-6">
+                    <button (click)="updateOrder(order._id, 'NEW', i)" class="btn2">NEW</button>
+                  </div>
+                  <div class="col-6">
+                    <button (click)="updateOrder(order._id, 'COMPLETED', i)" class="btn3">COMPLETED</button>
+                  </div>
+                </div>
+                <p class="dot">.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- PRoduct Modat-->
+        <div class="modal fade" [id]="'productModal'+i" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="row mb-5">
+                  <div class="col-2"></div>
+                  <div class="col-4">Name</div>
+                  <div class="col-2">Price</div>
+                  <div class="col-2">Size</div>
+                  <div class="col-2">Quantity</div>
+  
+                </div>
+                <div class="ano" *ngFor="let product of order?.products">
+                  <div class="row">
+  
+                      <div class="col-2">
+                          <img [src]="product?.mainImage" height="30" class="imgpic">
+                      </div>
+                      <div class="col-4">
+                          <p class="anokia">{{product?.name}}</p>
+                      </div>
+                      <div class="col-2">
+                          <p class="anoprice">{{product?.price}}</p>
+                      </div>
+                      <div class="col-2">
+                        <p>{{product?.size}}</p>
+                      </div>
+                      <div class="col-2">
+                          <p>{{product?.quantity}}</p>
+                      </div>
+                  </div>
+                </div>
+                    <div class="d-flex justify-content-end">
+                      <p class="mx-2">Total</p>
+                      <p>{{getTotalPrice(order?.products)}}</p>
+              
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+    <div class="row" *ngIf="searchMode">
+      <div class="col-2">
+        <div class="row">
+          <div class="col-2">
+            <img src="assets/images/Rectangle 821.png" class="biggy">
+          </div>
+          <div class="col-10">
+            <p class="namey">{{pkData?.owner.name }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <p class="orderid">{{pkData?.pk_id}}</p>
+      </div>
+      <div class="col-2">
+        <button class="btn btn-outline-warning" data-toggle="modal" data-target="#pkProductModal">View</button>
+      </div>
+      <div class="col-2">
+        <p class="orderid">{{pkData?.deliveryMethod}}</p>
+      </div>
+      <div class="col-2">
+        <p class="pricey">{{pkData?.status}}</p>
+      </div>
+      <div class="col-2">
+        <button class="btn1" data-toggle="modal" data-target="#pkModal">UPDATE</button>
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="pkModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row" style="margin-top:18%;">
+                <div class="col-6">
+                  <button (click)="updateOrder(pkData._id, 'NEW', '')" class="btn2">NEW</button>
+                </div>
+                <div class="col-6">
+                  <button (click)="updateOrder(pkData._id, 'COMPLETED', '')" class="btn3">COMPLETED</button>
+                </div>
+              </div>
+              <p class="dot">.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRoduct Modat-->
+      <div class="modal fade" id="pkProductModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row mb-5">
+                <div class="col-2"></div>
+                <div class="col-4">Name</div>
+                <div class="col-2">Price</div>
+                <div class="col-2">Size</div>
+                <div class="col-2">Quantity</div>
+
+              </div>
+              <div class="ano" *ngFor="let product of pkData?.products">
+                <div class="row">
+
+                    <div class="col-2">
+                        <img [src]="product?.mainImage" height="30" class="imgpic">
+                    </div>
+                    <div class="col-4">
+                        <p class="anokia">{{product?.name}}</p>
+                    </div>
+                    <div class="col-2">
+                        <p class="anoprice">{{product?.price}}</p>
+                    </div>
+                    <div class="col-2">
+                      <p>{{product?.size}}</p>
+                    </div>
+                    <div class="col-2">
+                        <p>{{product?.quantity}}</p>
+                    </div>
+                </div>
+              </div>
+                  <div class="d-flex justify-content-end">
+                    <p class="mx-2">Total</p>
+                    <p>{{getTotalPrice(pkData?.products)}}</p>
+            
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="float-right my-5 mr-3">
+            <button type="button" [disabled]="!this.prev" class="btn btn-danger m-1" (click)="onPrev()">Prev</button>
+            <button type="button"[disabled]="!this.next" class="btn btn-success" (click)="onNext()">Next</button>
+      
+        </div>
+
+
+  </div>
+
+</div>
+
+
+
+<div class="small">
+
+  <div class="container">
+    <h6 class="Products">Users</h6>
+    <p class="viewitem">View All</p>
+
+
+
+    <div class="row">
+      <div class="col-4">
+        <div class="row">
+          <div class="col-2">
+            <img src="assets/images/Rectangle 821.png" class="smallbiggy">
+          </div>
+          <div class="col-10">
+            <p class="smallnamey">Adeyoju Opeoluwa</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <p class="smallorderid">#10121</p>
+      </div>
+      <div class="col-2">
+        <p class="smallorderid">Yellow Flats</p>
+      </div>
+      <div class="col-1">
+        <p class="smallorderid">1</p>
+      </div>
+      <div class="col-1">
+        <p class="smallpricey">N6,000</p>
+      </div>
+      <div class="col-2">
+        <button class="smallbtn1" data-toggle="modal" data-target="#exampleModalCenter">UPDATE</button>
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row" style="margin-top:18%;">
+                <div class="col-6">
+                  <button class="smallbtn2">DELIVERED</button>
+                </div>
+                <div class="col-6">
+                  <button class="smallbtn3">IN PROGRESS</button>
+                </div>
+              </div>
+              <p class="dot">.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <div class="row">
+          <div class="col-2">
+            <img src="assets/images/Rectangle 831.png" class="smallbiggy">
+          </div>
+          <div class="col-10">
+            <p class="smallnamey">Akinolu Ore</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <p class="smallorderid">#10122</p>
+      </div>
+      <div class="col-2">
+        <p class="smallorderid">D&G Flats</p>
+      </div>
+      <div class="col-1">
+        <p class="smallorderid">2</p>
+      </div>
+      <div class="col-1">
+        <p class="smallpricey">N2,000</p>
+      </div>
+      <div class="col-2">
+        <button class="smallbtn1" data-toggle="modal" data-target="#exampleModalCenter">UPDATE</button>
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row" style="margin-top:18%;">
+                <div class="col-6">
+                  <button class="smallbtn2">DELIVERED</button>
+                </div>
+                <div class="col-6">
+                  <button class="smallbtn3">IN PROGRESS</button>
+                </div>
+              </div>
+              <p class="dot">.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="row">
+      <div class="col-4">
+        <div class="row">
+          <div class="col-2">
+            <img src="assets/images/Rectangle 841.png" class="smallbiggy">
+          </div>
+          <div class="col-10">
+            <p class="smallnamey">Adeyoju Ayoluwa</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <p class="smallorderid">#10123</p>
+      </div>
+      <div class="col-2">
+        <p class="smallorderid">OXFORD</p>
+      </div>
+      <div class="col-1">
+        <p class="smallorderid">1</p>
+      </div>
+      <div class="col-1">
+        <p class="smallpricey">N9,000</p>
+      </div>
+      <div class="col-2">
+        <button class="smallbtn1" data-toggle="modal" data-target="#exampleModalCenter">UPDATE</button>
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row" style="margin-top:18%;">
+                <div class="col-6">
+                  <button class="smallbtn2">DELIVERED</button>
+                </div>
+                <div class="col-6">
+                  <button class="smallbtn3">IN PROGRESS</button>
+                </div>
+              </div>
+              <p class="dot">.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="row">
+      <div class="col-4">
+        <div class="row">
+          <div class="col-2">
+            <img src="assets/images/Rectangle 851.png" class="smallbiggy">
+          </div>
+          <div class="col-10">
+            <p class="smallnamey">Falaye Ogoluwa</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <p class="smallorderid">#10125</p>
+      </div>
+      <div class="col-2">
+        <p class="smallorderid">Transparent Glasses</p>
+      </div>
+      <div class="col-1">
+        <p class="smallorderid">1</p>
+      </div>
+      <div class="col-1">
+        <p class="smallpricey">N4,000</p>
+      </div>
+      <div class="col-2">
+        <button class="smallbtn1" data-toggle="modal" data-target="#exampleModalCenter">UPDATE</button>
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row" style="margin-top:18%;">
+                <div class="col-6">
+                  <button class="btn2">DELIVERED</button>
+                </div>
+                <div class="col-6">
+                  <button class="btn3">IN PROGRESS</button>
+                </div>
+              </div>
+              <p class="dot">.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-4">
+        <div class="row">
+          <div class="col-2">
+            <img src="assets/images/Rectangle 861.png" class="smallbiggy">
+          </div>
+          <div class="col-10">
+            <p class="smallnamey">Kayode Mosunmola</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <p class="smallorderid">#10125</p>
+      </div>
+      <div class="col-2">
+        <p class="smallorderid">Digital Wristwatch</p>
+      </div>
+      <div class="col-1">
+        <p class="smallorderid">2</p>
+      </div>
+      <div class="col-1">
+        <p class="smallpricey">N6,000</p>
+      </div>
+      <div class="col-2">
+        <button class="smallbtn1" data-toggle="modal" data-target="#exampleModalCenter">UPDATE</button>
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row" style="margin-top:18%;">
+                <div class="col-6">
+                  <button class="smallbtn2">DELIVERED</button>
+                </div>
+                <div class="col-6">
+                  <button class="smallbtn3">IN PROGRESS</button>
+                </div>
+              </div>
+              <p class="dot">.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-4">
+        <div class="row">
+          <div class="col-2">
+            <img src="assets/images/Rectangle 87.png" class="smallbiggy">
+          </div>
+          <div class="col-10">
+            <p class="smallnamey">Caleb Animasaun</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <p class="smallorderid">#10126</p>
+      </div>
+      <div class="col-2">
+        <p class="smallorderid">Jordans</p>
+      </div>
+      <div class="col-1">
+        <p class="smallorderid">1</p>
+      </div>
+      <div class="col-1">
+        <p class="smallpricey">N15,000</p>
+      </div>
+      <div class="col-2">
+        <button class="smallbtn1" data-toggle="modal" data-target="#exampleModalCenter">UPDATE</button>
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row" style="margin-top:18%;">
+                <div class="col-6">
+                  <button class="smallbtn2">DELIVERED</button>
+                </div>
+                <div class="col-6">
+                  <button class="smallbtn3">IN PROGRESS</button>
+                </div>
+              </div>
+              <p class="dot">.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="row">
+      <div class="col-4">
+        <div class="row">
+          <div class="col-2">
+            <img src="assets/images/Rectangle 88.png" class="smallbiggy">
+          </div>
+          <div class="col-10">
+            <p class="smallnamey">Elizabeth Akinola</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <p class="smallorderid">#10127</p>
+      </div>
+      <div class="col-2">
+        <p class="smallorderid">Victoria Secret</p>
+      </div>
+      <div class="col-1">
+        <p class="smallorderid">2</p>
+      </div>
+      <div class="col-1">
+        <p class="smallpricey">N6,000</p>
+      </div>
+      <div class="col-2">
+        <button class="smallbtn1" data-toggle="modal" data-target="#exampleModalCenter">UPDATE</button>
+      </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row" style="margin-top:18%;">
+                <div class="col-6">
+                  <button class="smallbtn2">DELIVERED</button>
+                </div>
+                <div class="col-6">
+                  <button class="smallbtn3">IN PROGRESS</button>
+                </div>
+              </div>
+              <p class="dot">.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+</div>

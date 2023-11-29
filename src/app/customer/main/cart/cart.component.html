@@ -1,0 +1,119 @@
+<section class="cart">
+    <h5 class="shopping">Shopping Cart</h5>
+    <div class="container">
+        <div class="row" style="width:100%;">
+            <div class="col-3">
+                <p class="allitems">Item</p>
+            </div>
+            <div class="col-2">
+                <p class="allitems">Size</p>
+            </div>
+            <div class="col-2">
+                <p class="allitems">Quantity</p>
+            </div>
+            <div class="col-2">
+                <p class="allitems">Price</p>
+            </div>
+            <div class="col-2">
+                <p class="allitems">Total</p>
+            </div>
+            <div class="col-1">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container" *ngFor="let cart of carts">
+        <div class="row allrow" style="width:100%;">
+            <div class="col-3">
+                <div class="row">
+                    <div class="col-4">
+                        <img routerLink="/customer/main/product/{{cart?.slug}}" [src]="cart?.mainImage" class="imgcart">
+                    </div>
+                    <div class="col-8">
+                        <p class="highboot">{{cart?.name}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <p class="highboot">{{cart?.size}}</p>
+            </div>
+            <div class="col-2">
+                <div class="row">
+                    <div class="col-4">
+                        <img (click)="deceaseQuantity(cart)" src="assets/shop product/Group 64.png" class="oney">
+                    </div>
+                    <div class="col-4">
+                        <p class="py">{{cart?.quantity}}</p>
+                    </div>
+                    <div class="col-4">
+                        <img (click)="increaseQuantity(cart)" src="assets/shop product/Group 65.png" class="twoy">
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <p class="highboot">{{cart?.price | currency:'₦':'symbol-narrow'}}</p>
+            </div>
+            <div class="col-2">
+                <p class="highbootprice">{{cart?.price * cart?.quantity | currency:'₦':'symbol-narrow'}}</p>
+            </div>
+
+            <div class="col-1">
+                <img src="assets/shop product/exit.png" (click)="removeItem()" class="exit">
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="container">
+        <div class="row" style="width:100%;">
+            <div class="col-4">
+
+            </div>
+            <div class="col-2">
+
+            </div>
+            <div class="col-2">
+
+            </div>
+            <div class="col-2">
+                <p class="highboot">Total</p>
+            </div>
+            <div class="col-2">
+                <p class="highbootprice">{{overallTotal | currency:'₦':'symbol-narrow'}}</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <div class="row" style="width:100%;">
+            <div class="col-6">
+
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6">
+                        <p class="continue" routerLink="/customer/main/">Continue Shopping</p>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn4" routerLink="/customer/main/order">GO TO CHECKOUT</button>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</section>
+
+<p class="overall"></p>

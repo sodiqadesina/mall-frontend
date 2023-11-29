@@ -1,0 +1,185 @@
+<div class="big">
+    <div class="container">
+        <h6 class="Products">Users</h6>
+        <p class="viewitem">View All</p>
+        <div class="row" *ngFor="let user of users">
+            <div class="col-2">
+                <img src="assets/images/Rectangle 821.png" class="biggy">
+            </div>
+            <div class="col-4">
+                <p class="namey">{{user?.name}}</p>
+            </div>
+            <div class="col-3">
+                <button [disabled]="user?.active" (click)="enable(user?._id)" class="btn btn-success">ENABLE ACCOUNT</button>
+            </div>
+            <div class="col-3">
+                <button [disabled]="!user?.active" (click)="disable(user?._id)"class="btn btn-danger">DISABLE ACCOUNT</button>
+            </div>
+        </div>
+
+        <div class="float-right my-5 mr-3">
+            <button type="button" [disabled]="!this.prev" class="btn btn-danger m-1" (click)="onPrev()">Prev</button>
+            <button type="button" [disabled]="!this.next" class="btn btn-success" (click)="onNext()">Next</button>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+<div class="small">
+    <div class="container">
+        <h6 class="Products">Users</h6>
+        <p class="viewitem">View All</p>
+
+
+
+        <div class="row">
+            <div class="col-2">
+                <img src="assets/images/Rectangle 821.png" class="smallbiggy">
+            </div>
+            <div class="col-4">
+                <p class="smallnamey">Adeyoju Opeoluwa</p>
+            </div>
+            <div class="col-3">
+                <button class="smallbtn1">ENABLE ACCOUNT</button>
+            </div>
+            <div class="col-3">
+                <button class="smallbtn2">DISABLE ACCOUNT</button>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top:2%;">
+            <div class="col-2">
+                <img src="assets/images/Rectangle 831.png" class="smallbiggy">
+            </div>
+            <div class="col-4">
+                <p class="smallnamey">Akinolu Ore</p>
+            </div>
+            <div class="col-3">
+                <button class="smallbtn1">ENABLE ACCOUNT</button>
+            </div>
+            <div class="col-3">
+                <button class="smallbtn2">DISABLE ACCOUNT</button>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-top:2%;">
+            <div class="col-2">
+                <img src="assets/images/Rectangle 841.png" class="smallbiggy">
+            </div>
+            <div class="col-4">
+                <p class="smallnamey">Adeyoju Ayoluwa</p>
+            </div>
+            <div class="col-3">
+                <button class="smallbtn1">ENABLE ACCOUNT</button>
+            </div>
+            <div class="col-3">
+                <button class="smallbtn2">DISABLE ACCOUNT</button>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-top:2%;">
+            <div class="col-2">
+                <img src="assets/images/Rectangle 851.png" class="smallbiggy">
+            </div>
+            <div class="col-4">
+                <p class="smallnamey">Falaye Ogoluwa</p>
+            </div>
+            <div class="col-3">
+                <button class="smallbtn1">ENABLE ACCOUNT</button>
+            </div>
+            <div class="col-3">
+                <button class="smallbtn2">DISABLE ACCOUNT</button>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-top:2%;">
+            <div class="col-2">
+                <img src="assets/images/Rectangle 861.png" class="smallbiggy">
+            </div>
+            <div class="col-4">
+                <p class="smallnamey">Kayode Mosunmola</p>
+            </div>
+            <div class="col-3">
+                <button class="smallbtn1">ENABLE ACCOUNT</button>
+            </div>
+            <div class="col-3">
+                <button class="smallbtn2">DISABLE ACCOUNT</button>
+            </div>
+        </div>
+
+
+
+        <div class="row" style="margin-top:2%;">
+            <div class="col-2">
+                <img src="assets/images/Rectangle 87.png" class="smallbiggy">
+            </div>
+            <div class="col-4">
+                <p class="smallnamey">Caleb Animasaun</p>
+            </div>
+            <div class="col-3">
+                <button class="smallbtn1">ENABLE ACCOUNT</button>
+            </div>
+            <div class="col-3">
+                <button class="smallbtn2">DISABLE ACCOUNT</button>
+            </div>
+        </div>
+
+
+        <div class="row" style="margin-top:2%;">
+            <div class="col-2">
+                <img src="assets/images/Rectangle 88.png" class="smallbiggy">
+            </div>
+            <div class="col-4">
+                <p class="smallnamey">Elizabeth Akinola</p>
+            </div>
+            <div class="col-3">
+                <button class="smallbtn1">ENABLE ACCOUNT</button>
+            </div>
+            <div class="col-3">
+                <button class="smallbtn2">DISABLE ACCOUNT</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>

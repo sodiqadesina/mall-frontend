@@ -1,0 +1,141 @@
+<div class="big">
+    <div class="row" style="width:100%;">
+        <div class="col-3 colly" style="background-color: #F3EDDD;">
+            <p class="stu">.</p>
+            <p class="student">STUDENT NEEDS</p>
+            <div  class="row" style="margin-top:60;width:100%;" routerLink="/admin/main/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}">
+                <div class="col-4">
+                    <img src="assets/images/dashboard (2) 1.png" class="firstIcon">
+                </div>
+                <div class="col-8">
+                    <p class="dashboard">Dashboard</p>
+                </div>
+            </div>
+
+            <div routerLink="/admin/main/product" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}"  class="row" style="margin-top:50;width:100%;">
+                <div class="col-4">
+                    <img src="assets/images/Group 67.png" class="firstIcon">
+                </div>
+                <div class="col-8">
+                    <p class="dashboard">Products</p>
+                </div>
+            </div>
+
+            <div routerLink="/admin/main/category" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}"  class="row" style="margin-top:50;width:100%;">
+                <div class="col-4">
+                    <img src="assets/images/Group 67.png" class="firstIcon">
+                </div>
+                <div class="col-8">
+                    <p class="dashboard">Categories</p>
+                </div>
+            </div>
+
+            <div routerLink="/admin/main/user" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}"  class="row" style="margin-top:50;width:100%;">
+                <div class="col-4">
+                    <img src="assets/images/Group 68.png" class="firstIcon">
+                </div>
+                <div class="col-8">
+                    <p class="dashboard">Users</p>
+                </div>
+            </div>
+
+            <div routerLink="/admin/main/order" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}" class="row" style="margin-top:50;width:100%;">
+                <div class="col-4">
+                    <img src="assets/images/Group 69.png" class="firstIcon">
+                </div>
+                <div class="col-8">
+                    <p class="dashboard">Orders</p>
+                </div>
+            </div>
+
+
+
+            <div class="row another" style="width:100%;">
+                <div class="col-4">
+                    <img src="assets/images/Group 70.png" class="firstIcon">
+                </div>
+                <div class="col-8">
+                    <p (click)="logout()" class="dashboard">Log Out</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-9">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="small">
+    <div class="row" style="width:100%;">
+        <div class="col-5" style="background-color: #F3EDDD;">
+            <p class="stu">.</p>
+            <p class="student">STUDENT NEEDS</p>
+            <div class="row" style="margin-top:60;width:100%;">
+                <div class="col-4">
+                    <img src="assets/images/dashboard (2) 1.png" class="firstIcon">
+                </div>
+                <div class="col-8">
+                    <p class="dashboard">Dashboard</p>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:30;width:100%;">
+                <div class="col-4">
+                    <img src="assets/images/Group 67.png" class="firstIcon">
+                </div>
+                <div class="col-8">
+                    <p class="dashboard">Products</p>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:30;width:100%;">
+                <div class="col-4">
+                    <img src="assets/images/Group 67.png" class="firstIcon">
+                </div>
+                <div class="col-8">
+                    <p class="dashboard">Categories</p>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:30;width:100%;">
+                <div class="col-4">
+                    <img src="assets/images/Group 68.png" class="firstIcon">
+                </div>
+                <div class="col-8">
+                    <p class="dashboard">Users</p>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:30;width:100%;">
+                <div class="col-4">
+                    <img src="assets/images/Group 69.png" class="firstIcon">
+                </div>
+                <div class="col-8">
+                    <p class="dashboard">Orders</p>
+                </div>
+            </div>
+
+
+
+            <div class="row another1" style="width:100%;">
+                <div class="col-4">
+                    <img src="assets/images/Group 70.png" class="firstIcon">
+                </div>
+                <div class="col-8">
+                    <p class="dashboard">Log Out</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-7">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div> -->

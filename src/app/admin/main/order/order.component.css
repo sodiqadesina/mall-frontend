@@ -1,0 +1,387 @@
+/*   Side Nav */
+.small{
+    display:none;
+}
+
+.another{
+    margin-top:150%;
+}
+
+
+.stu{
+    margin-top:64;
+    color:#F3EDDD;
+}
+.inp{
+    background: #F5F1E4;
+    box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+    border-radius: 20px;
+    padding:5px;
+    width:90%;
+    outline:0;
+    border:0;
+}
+.inp::placeholder{
+    font-family: Lato;
+font-style: normal;
+font-weight: 500;
+color: #666666;
+}
+.student{
+    font-family: Pacifico;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+color: #333333;
+margin-left:10%;
+}
+
+.firstIcon{
+margin-left:40%;
+
+}
+
+.dashboard{
+    font-family: Lato;
+font-style: normal;
+font-weight: 500;
+font-size: 17px;
+color: #333333;
+}
+
+
+.secondIcon{
+    margin-left:40%;
+    
+    }
+    
+    .dashboard1{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    color: #1775A3;
+    }
+
+    .Products{
+        font-family: Lato;
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+color: #333333;
+margin-top: 73;
+    }
+
+
+.viewitem{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    color: #1775A3;
+    margin-top:68;
+    margin-left:90%;
+
+}
+
+.everything{
+    font-family: Lato;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+color: #444444;
+}
+
+.biggy{
+    padding-left: 2%;
+    width:190%;
+    margin-top:5%;
+}
+
+.namey{
+    font-family: Lato;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+color: #333333;
+padding-top:3%;
+}
+
+.col-9 .row{
+    margin-top:3%;
+}
+
+.orderid{
+    padding-top:10%;
+    font-family: Lato;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+color: #333333;
+}
+
+.pricey{
+    font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+padding-top:10%;
+color: #333333;
+}
+
+.btn1{
+    font-family: Lato;
+font-style: normal;
+font-weight: bold;
+color: #1775A3;
+background: #CCD0FC;
+border-radius: 4px;
+padding:6px;
+border:none;
+outline:0;
+width:100%;
+margin-top:4%;
+margin-left:5%;
+}
+
+
+.btn2{
+    background: #CCD0FC;
+border-radius: 4px;
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+text-align: center;
+color: #1775A3;
+outline:0;
+border:none;
+padding:5px;
+width:100%;
+}
+
+.btn3{
+    background: #CCD0FC;
+border-radius: 4px;
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+text-align: center;
+color: #DB4343;
+outline:0;
+border:none;
+padding:5px;
+width:100%; 
+}
+
+.dot{
+    color:white;
+    margin-top:13%;
+}
+
+
+
+
+
+
+
+    @media (max-width: 576px) {
+/*   Side Nav */
+/*   Side Nav */
+.big{
+    display:none;
+}
+
+.small{
+    display:block;
+}
+
+.stu{
+    margin-top:24;
+    color:#F3EDDD;
+}
+
+.student{
+    font-family: Pacifico;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+color: #333333;
+margin-left:10%;
+}
+
+.firstIcon{
+margin-left:40%;
+width:20;
+}
+
+.dashboard{
+    font-family: Lato;
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+color: #333333;
+}
+
+
+.secondIcon{
+    margin-left:40%;
+    width:20;
+    }
+    
+    .dashboard1{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    color: #1775A3;
+    }
+
+  
+
+.another1{
+    margin-top:420%;
+}
+
+.Products{
+    font-family: Lato;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+color: #333333;
+margin-top: 14;
+}
+
+
+.viewitem{
+font-family: Lato;
+font-style: normal;
+font-weight: 500;
+font-size: 10px;
+color: #1775A3;
+margin-top:8;
+margin-left:75%;
+
+}
+
+.smallbiggy{
+    padding-left: 2%;
+    width:190%;
+    margin-top:5%;
+    width:20;
+
+}
+
+.smallnamey{
+    font-family: Lato;
+font-style: normal;
+font-weight: normal;
+font-size: 8px;
+color: #333333;
+padding-top:3%;
+}
+
+.col-9 .row{
+    margin-top:3%;
+}
+
+.smallorderid{
+    padding-top:10%;
+    font-family: Lato;
+font-style: normal;
+font-weight: normal;
+font-size: 8px;
+color: #333333;
+}
+
+.smallpricey{
+    font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 8px;
+padding-top:10%;
+color: #333333;
+}
+
+.smallbtn1{
+    font-family: Lato;
+font-style: normal;
+font-weight: bold;
+color: #1775A3;
+background: #CCD0FC;
+border-radius: 4px;
+padding:3px;
+border:none;
+outline:0;
+width:100;
+margin-top:4%;
+margin-left:5%;
+font-size:8px;
+}
+
+
+.smallbtn2{
+    background: #CCD0FC;
+border-radius: 4px;
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+text-align: center;
+color: #1775A3;
+outline:0;
+border:none;
+padding:5px;
+width:100%;
+}
+
+.smallbtn3{
+    background: #CCD0FC;
+border-radius: 4px;
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+text-align: center;
+color: #DB4343;
+outline:0;
+border:none;
+padding:5px;
+width:100%; 
+}
+
+
+
+
+
+    }
+
+  
+    @media (max-width: 802px) {
+
+        .pricey{
+            font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        padding-top:10%;
+        color: #333333;
+
+        }
+
+        .btn1{
+            margin-left:8%;
+            width:120%;
+        }
+    }
+
+    @media (max-width: 1440px) {
+
+    
+        .another{
+            margin-top:200%;
+        }
+
+
+    }

@@ -1,0 +1,52 @@
+<div class="accordion" style="margin-top: 150px;" id="accordionExample">
+    <div class="card my-3" *ngFor="let order of orders; let i = index;">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                    [attr.data-target]="'#collapse'+i" aria-expanded="true" aria-controls="collapseOne">
+                    Order {{order?.pk_id}}
+                </button>
+            </h2>
+        </div>
+
+        <div [id]="'collapse'+i" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6 d-flex justify-content-between">
+                        <p>order Id</p>
+                        <h5>{{order?.pk_id}}</h5>
+                    </div>
+                    <div class="col-6 d-flex justify-content-between">
+                        <p>Order Status</p>
+                        <h5>{{order?.status}}</h5>
+                    </div>
+                    <div class="col-12">
+                        <p class="allproduct">Products</p>
+                        <div class="allproductdiv">
+                            <div class="container">
+                                <div class="row" *ngFor="let product of order?.products">
+                                    <div class="col-2" style="margin-top:3%;">
+                                        <img [src]="product?.mainImage" class="img1">
+                                    </div>
+                                    <div class="col-6" style="margin-top:3%;">
+                                        <p class="kia">{{product?.name}}</p>
+                                    </div>
+    
+                                    <div class="col-4" style="margin-top:3%;">
+                                        <p class="price">{{product?.price}}</p>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end mt-2">
+                            <p class="mx-2">Total</p>
+                            <p>{{getTotalPrice(order?.products)}}</p>
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

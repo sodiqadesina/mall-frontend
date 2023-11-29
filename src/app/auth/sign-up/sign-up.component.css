@@ -1,0 +1,284 @@
+.navbar-brand{
+    font-family: Pacifico;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+color: #333333;
+margin-left:77;
+}
+
+
+.navbar-nav{
+    margin-left:590;
+}
+
+.nav-item{
+    margin-left:63;
+}
+
+.linky{
+    font-family: Lato;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+color: #333333;
+}
+
+.nav-item .linky1{
+    font-family: Lato;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+color: #1775A3;
+}
+
+.small{
+    display:none;
+}
+
+.signup{
+width:70%;
+height: 100vh;
+background: #F3EDDD;
+margin-top:57;
+margin-left:20%;
+border-radius:6px;
+}
+
+.h6one{
+    margin-top:3%;
+    color: #1775A3;
+    text-align:center;
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+}
+
+.pone{
+    margin-top:1%;
+    font-family: Lato;
+    color: #333333;
+    text-align:center;
+font-style: normal;
+font-weight: 400;
+font-size: 20px; 
+}
+
+label,input{
+    margin-left:10%;
+}
+
+label{
+    font-size:26px;
+    color:#444444;
+    font-family: Lato;
+font-style: normal;
+font-weight: 400;
+margin-top:5%;
+}
+
+input{
+    width:80%;
+    background-color:#F3EDDD;
+    border: 1px solid #CCD0FC;
+box-sizing: border-box;
+padding:5px;
+  
+}
+
+.signup i{
+    margin-left:-9%;
+    font-size:20px;
+}
+
+.btn1{
+    margin-top:50;
+    background: #1775A3;
+border-radius: 4px;
+outline:none;
+border:none;
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+color: #F3EDDD;
+width:30%;
+margin-left:35%;
+}
+
+.ptwo{
+    margin-top:33;
+    font-family: Lato;
+    color: #333333;
+    text-align:center;
+font-style: normal;
+font-weight: 400;
+font-size: 20px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 576px) {
+.small{
+    display:block;
+}  
+.navbar{
+    display:none;
+}
+
+.navbar-brand{
+    font-family: Pacifico;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+color: #333333;
+margin-left:1;
+}
+
+.ok{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    color: #333333;
+}
+
+.ok1{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    color: #1775A3;
+}
+
+.signup{
+    width:95%;
+    height: 90vh;
+    background: #F3EDDD;
+    margin-top:37;
+    margin-left:4%;
+    }
+    
+    .h6one{
+        margin-top:3%;
+        color: #1775A3;
+        text-align:center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    }
+    
+    .pone{
+        margin-top:1%;
+        font-family: Lato;
+        color: #333333;
+        text-align:center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px; 
+    }
+    
+    label,input{
+        margin-left:10%;
+    }
+    
+    label{
+        font-size:18px;
+        color:#444444;
+        font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    margin-top:5%;
+    }
+    
+    input{
+        width:80%;
+        background-color:#F3EDDD;
+        border: 1px solid #CCD0FC;
+    box-sizing: border-box;
+    padding:3px;
+      
+    }
+    
+    .signup i{
+        margin-left:-15%;
+        font-size:20px;
+    }
+    
+    .btn1{
+        margin-top:30;
+        background: #1775A3;
+    border-radius: 4px;
+    outline:none;
+    border:none;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    padding:2px;
+    color: #F3EDDD;
+    width:60%;
+    margin-left:22%;
+    }
+    
+    .ptwo{
+        margin-top:33;
+        font-family: Lato;
+        color: #333333;
+        text-align:center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px; 
+    }
+    
+    
+    
+    .forgot{
+        margin-left:20%;
+        margin-top:13;
+        font-family: Lato;
+        color: #333333;
+        text-align:center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px; 
+    }
+
+
+
+}
+
+
+
+
+@media (max-width: 1024px) {
+.navbar-nav{
+    margin-left:390;
+}
+
+
+    
+}

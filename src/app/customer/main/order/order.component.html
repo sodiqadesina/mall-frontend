@@ -1,0 +1,96 @@
+<h5 class="shopping">Order Summary</h5>
+<div class="container" *ngFor="let cart of carts">
+    <div class="row allrow" style="width:100%;">
+        <div class="col-4">
+            <div class="row">
+                <div class="col-4">
+                    <img [src]="cart?.mainImage" class="imgcart">
+                </div>
+                <div class="col-8">
+                    <p class="highboot">{{cart?.name}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+
+        </div>
+        <div class="col-2">
+            <p class="highboot">{{cart?.quantity}}</p>
+        </div>
+        <div class="col-2">
+
+        </div>
+        <div class="col-2">
+            <p class="highbootprice">{{cart?.price * cart?.quantity | currency:'₦':'symbol-narrow'}}</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<h5 class="payment">Payment Method</h5>
+<div class="container">
+    <div class="row method">
+        <div class="col-4">
+            <input type="radio" (change)="radioHandler($event)" name="delivery" value="PAYSTACK" data-toggle="modal">
+            <label for="male">Pay On Website</label>
+        </div>
+        <div class="col-4">
+            <input type="radio" (change)="radioHandler($event)" name="delivery" value="POC">
+            <label for="male">Pay On Counter</label>
+        </div>
+        <div class="col-4">
+
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <h6 class="paystack">Paystack API Interface</h6>
+            <button class="pay">PAY</button>
+            <p class="last"></p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row" style="width:100%;">
+        <div class="col-4">
+
+        </div>
+        <div class="col-2">
+
+        </div>
+        <div class="col-2">
+
+        </div>
+        <div class="col-2">
+            <p class="highboot1">Total</p>
+        </div>
+        <div class="col-2">
+            <p class="highbootprice1">{{overallTotal | currency:'₦':'symbol-narrow'}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <button *ngIf="payMethod == 'PAYSTACK'" angular4-paystack 
+    [key]="'pk_test_bc9d400332e0dfb3791e43bbf11f66b7fd102fc8'"
+    [email]="currentUser?.email"
+    [amount]="overallTotal*100" [ref]="reference"
+    (paymentInit)="paymentInit()"
+    (close)="paymentCancel()" 
+    (callback)="paymentDone($event)" class="checkout1">PAY</button>
+    <button *ngIf="payMethod == 'POC'" class="checkout1" (click)="createOrder()" >Confirm</button>
+</div>
+
+<p class="lastall"></p>

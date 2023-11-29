@@ -1,0 +1,324 @@
+<div class="big">
+    <div class="container">
+
+        <!-- <div class="row" style="width:100%;margin-top:60;">
+            <div class="col-4">
+
+            </div>
+            <div class="col-6">
+                <input type="text" class="inp" placeholder="Search anything">
+                <i class="fa fa-search search" aria-hidden="true"></i>
+            </div>
+            <div class="col-2">
+                <img src="assets/images/Group 71.png" class="bell">
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="row" style="width:100%;margin-top:94;">
+                <div class="col-3 ok">
+                    <div class="nom">
+                        <p class="number">{{products?.length}}</p>
+                        <p class="product">Products</p>
+                    </div>
+                </div>
+                <div class="col-3 ok">
+                    <div class="nom">
+                        <p class="number">{{categories?.length}}</p>
+                        <p class="product">Categories</p>
+                    </div>
+                </div>
+                <div class="col-3 ok">
+                    <div class="nom">
+                        <p class="number">{{users?.length}}</p>
+                        <p class="product">Users</p>
+                    </div>
+                </div>
+                <div class="col-3 ok">
+                    <div class="nom">
+                        <p class="number">{{orders?.length}}</p>
+                        <p class="product">Orders</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="width:100%;margin-top:77;">
+                <div class="col-6">
+                    <p class="allproduct">Products</p>
+                    <div class="allproductdiv">
+                        <div class="container">
+                            <div class="row" *ngFor="let product of products?.slice(0,5)">
+                                <div class="col-2" style="margin-top:3%;">
+                                    <img [src]="product?.mainImage" class="img1">
+                                </div>
+                                <div class="col-6" style="margin-top:3%;">
+                                    <p class="kia">{{product?.name}}</p>
+                                </div>
+
+                                <div class="col-4" style="margin-top:3%;">
+                                    <p class="price">{{product?.price}}</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <p class="allproduct">Users</p>
+                    <div class="allproductdiv">
+                        <div class="container">
+                            <div class="row" *ngFor="let user of users?.slice(0,5)">
+                                <div class="col-2" style="margin-top:3%;">
+                                    <img src="assets/images/Rectangle 82.png" class="img1">
+                                </div>
+                                <div class="col-10" style="margin-top:3%;">
+                                    <p class="kia">{{user?.name}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+        <div class="container">
+            <p class="orders">Orders</p>
+            <div class="ordersdiv">
+                <div class="container">
+                    <div class="row" *ngFor="let order of orders?.slice(0,5)">
+                        <div class="col-1" style="margin-top:10;">
+                            <img src="assets/images/Rectangle 82.png" class="img2">
+
+                        </div>
+                        <div class="col-2" style="margin-top:10;">
+                            <p class="kia">{{order?.owner.name}}</p>
+                        </div>
+                        <div class="col-3" style="margin-top:10;">
+                            <p class="kia">{{order?.pk_id}}</p>
+                        </div>
+                        <div class="col-3" style="margin-top:10;">
+                            <p class="kia">{{order?.createdAt | date }}</p>
+                        </div>
+                        <!-- <div class="col-1" style="margin-top:10;">
+                            <p class="kia">1</p>
+                        </div>
+                        <div class="col-2" style="margin-top:10;">
+                            <p class="price">N6,000</p> -->
+                        <!-- </div> -->
+                        <div class="col-3" style="margin-top:10;">
+                            <p class="delivered">{{order?.status}}</p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- <div class="small">
+    <div class="row">
+        <div class="col-9">
+            <input type="text" class="smallinp" placeholder="Search anything">
+            <i class="fa fa-search smallsearch" aria-hidden="true"></i>
+        </div>
+        <div class="col-3">
+            <img src="assets/images/Group 71.png" class="smallbell">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row" style="width:100%;margin-top:19;">
+            <div class="col-6 smallok">
+                <div class="smallnom">
+                    <p class="smallnumber">120</p>
+                    <p class="smallproduct">Products</p>
+                </div>
+            </div>
+            <div class="col-6 smallok">
+                <div class="smallnom">
+                    <p class="smallnumber">5</p>
+                    <p class="smallproduct">Categories</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" style="width:100%;margin-top:5;">
+            <div class="col-6 smallok">
+                <div class="smallnom">
+                    <p class="smallnumber">20</p>
+                    <p class="smallproduct">Users</p>
+                </div>
+            </div>
+            <div class="col-6 smallok">
+                <div class="smallnom">
+                    <p class="smallnumber">20</p>
+                    <p class="smallproduct">Orders</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <p class="allproduct">Products</p>
+        <div class="allproductdiv">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4" style="margin-top:10%;">
+                        <img src="assets/images/Rectangle 94.png" class="img1">
+                    </div>
+                    <div class="col-4" style="margin-top:10%;">
+                        <p class="kia">Kai Body Lotion</p>
+                    </div>
+
+                    <div class="col-4" style="margin-top:10%;">
+                        <p class="price">N6,000</p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-4" style="margin-top:1%;">
+                        <img src="assets/images/Rectangle 95.png" class="img1">
+                    </div>
+                    <div class="col-4" style="margin-top:1%;">
+                        <p class="kia">Blue Flats</p>
+                    </div>
+
+                    <div class="col-4" style="margin-top:1%;">
+                        <p class="price">N4,000</p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-4" style="margin-top:1%;">
+                        <img src="assets/images/Rectangle 96.png" class="img1">
+                    </div>
+                    <div class="col-4" style="margin-top:1%;">
+                        <p class="kia">OXFORD</p>
+                    </div>
+
+                    <div class="col-4" style="margin-top:1%;">
+                        <p class="price">N8,000</p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-4" style="margin-top:1%;">
+                        <img src="assets/images/Rectangle 97.png" class="img1">
+                    </div>
+                    <div class="col-4" style="margin-top:1%;">
+                        <p class="kia">Victoria Secret</p>
+                    </div>
+
+                    <div class="col-4" style="margin-top:1%;">
+                        <p class="price">N7,000</p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-4" style="margin-top:1%;">
+                        <img src="assets/images/Rectangle 98.png" class="img1">
+                    </div>
+                    <div class="col-4" style="margin-top:1%;">
+                        <p class="kia">Dove Body Lotion</p>
+                    </div>
+
+                    <div class="col-4" style="margin-top:1%;">
+                        <p class="price">N2,000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <p class="allproduct">Users</p>
+        <div class="allproductdiv">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3" style="margin-top:10%;">
+                        <img src="assets/images/Rectangle 82.png" class="img1">
+                    </div>
+                    <div class="col-9" style="margin-top:10%;">
+                        <p class="kia">Adeyoju Opeoluwa</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3" style="margin-top:1%;">
+                        <img src="assets/images/Rectangle 83.png" class="img1">
+                    </div>
+                    <div class="col-9" style="margin-top:1%;">
+                        <p class="kia">Akinolu Ore</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3" style="margin-top:1%;">
+                        <img src="assets/images/Rectangle 84.png" class="img1">
+                    </div>
+                    <div class="col-9" style="margin-top:1%;">
+                        <p class="kia">Adeyoju Ayoluwa</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3" style="margin-top:1%;">
+                        <img src="assets/images/Rectangle 85.png" class="img1">
+                    </div>
+                    <div class="col-9" style="margin-top:1%;">
+                        <p class="kia">Falaye Ogoluwa</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3" style="margin-top:1%;">
+                        <img src="assets/images/Rectangle 86.png" class="img1">
+                    </div>
+                    <div class="col-9" style="margin-top:1%;">
+                        <p class="kia">Kayode Mosunmola</p>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+</div> -->

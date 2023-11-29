@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "student-needs-4e1d2": {
+      "hosting": {
+        "mall-client": [
+          "student-needs-4e1d2"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "student-needs-4e1d2"
+  }
+}

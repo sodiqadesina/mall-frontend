@@ -1,0 +1,376 @@
+/*   Side Nav */
+.small{
+    display:none;
+}
+
+.another{
+    margin-top:150%;
+}
+
+
+.stu{
+    margin-top:64;
+    color:#F3EDDD;
+}
+
+.student{
+    font-family: Pacifico;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+color: #333333;
+margin-left:10%;
+}
+
+.firstIcon{
+margin-left:40%;
+
+}
+
+.dashboard{
+    font-family: Lato;
+font-style: normal;
+font-weight: 500;
+font-size: 17px;
+color: #333333;
+}
+
+
+.secondIcon{
+    margin-left:40%;
+    
+    }
+    
+    .dashboard1{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    color: #1775A3;
+    }
+
+    .Products{
+        font-family: Lato;
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 36px;
+color: #333333;
+    }
+
+.addproducts{
+    outline:0;
+    border:none;
+    font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+color: #F3EDDD;
+background: #1775A3;
+border-radius: 4px;
+padding:5px;
+width:75%;
+}
+
+
+.viewitem{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    color: #1775A3;
+    margin-top:68;
+    margin-left:90%;
+
+}
+
+.anokia{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+     padding-left:7%;
+     padding-top:1%;
+    color: #333333;
+}
+
+
+
+.imgpic1{
+    margin-top:27%;
+    margin-left:5%;
+}
+
+.imgpic3{
+    margin-top:7%;
+    width:30%;
+    margin-left:5%;
+}
+
+
+.ano{
+    width: 100%;
+height: 3.5%;
+background: #F3EDDD;
+box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+border-radius: 4px;
+}
+
+.pic{
+    width: 160px;
+height: 160px;
+margin-left:30%;
+background: #F3EDDD;
+border-radius: 4px;
+}
+
+.camera{
+    margin-top:40%;
+    margin-left:41%;
+}
+
+.productname{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    color: #333333;
+    margin-top:3%;
+}
+
+.input1{
+    border: 1px solid #CCD0FC;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width:90%;
+}
+
+.lastadd{
+    margin-top:20;
+    margin-left: 29%;
+    outline:0;
+    border:#1775A3;
+    width:40%;
+    padding:4px;
+    font-family: Lato;
+font-style: normal;
+font-weight: bold;
+color: #FFFFFF;
+background: #1775A3;
+border-radius: 4px;
+}
+
+
+
+
+
+    @media (max-width: 576px) {
+/*   Side Nav */
+.big{
+    display:none;
+}
+
+.small{
+    display:block;
+}
+
+.stu{
+    margin-top:24;
+    color:#F3EDDD;
+}
+
+.student{
+    font-family: Pacifico;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+color: #333333;
+margin-left:10%;
+}
+
+.firstIcon{
+margin-left:40%;
+width:20;
+}
+
+.dashboard{
+    font-family: Lato;
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+color: #333333;
+}
+
+
+.secondIcon{
+    margin-left:40%;
+    width:20;
+    }
+    
+    .dashboard1{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    color: #1775A3;
+    }
+
+  
+
+.another1{
+    margin-top:420%;
+}
+
+
+
+.Products{
+    font-family: Lato;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+color: #333333;
+}
+
+.smalladdproducts{
+outline:0;
+border:none;
+font-family: Lato;
+font-style: normal;
+font-weight: bold;
+color: #F3EDDD;
+background: #1775A3;
+border-radius: 4px;
+width:70;
+}
+
+
+.smallviewitem{
+font-family: Lato;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+color: #1775A3;
+margin-top:68;
+margin-left:65%;
+
+}
+
+.smallanokia{
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+padding-left:5%;
+padding-top:8%;
+color: #333333;
+}
+
+
+.imgpic1{
+margin-top:38%;
+margin-left:5%;
+width:10;
+}
+
+.imgpic3{
+margin-top:7%;
+width:30%;
+margin-left:5%;
+}
+
+
+.ano{
+width: 110%;
+height: 4.5%;
+background: #F3EDDD;
+box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+    @media (max-width: 802px) {
+
+        .viewitem{
+            font-family: Lato;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 17px;
+            color: #1775A3;
+            margin-top:68;
+            margin-left:88.1%;
+        
+        }
+
+        .anokia{
+            font-family: Lato;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+        
+            color: #333333;
+        }
+        
+        .anoprice{
+            font-family: Lato;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 17px;
+         
+            color: #333333;
+        }
+
+        .imgpic3{
+            margin-top:10%;
+            width:45%;
+            margin-left:5%;
+        }
+
+
+    }
+
+
+    @media (max-width: 1440px) {
+
+    
+        .another{
+            margin-top:300%;
+        }
+
+        .addproducts{
+            outline:0;
+            border:none;
+            font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 17px;
+        color: #F3EDDD;
+        background: #1775A3;
+        border-radius: 4px;
+        padding:6px;
+        width:70%;
+        }
+        
+
+    }

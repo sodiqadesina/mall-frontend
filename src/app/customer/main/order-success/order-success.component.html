@@ -1,0 +1,72 @@
+<h5 class="successful">ORDER SUCCESSFUL!</h5>
+<h5 class="thanks">Thanks for your order</h5>
+
+<div class="container">
+    <div class="row first">
+        <div class="col-6">
+            <p class="id">Order ID</p>
+            <h5 class="code">{{order?.pk_id}}</h5>
+        </div>
+
+        <div class="col-6">
+            <p class="id">Order Date</p>
+            <h5 class="code">{{order?.createdAt | date}}</h5>
+        </div>
+
+    </div>
+</div>
+
+<h5 class="shopping">Order Summary</h5>
+<div class="container" *ngFor="let product of order?.products">
+    <div class="row allrow" style="width:100%;">
+        <div class="col-4">
+            <div class="row">
+                <div class="col-4">
+                    <img [src]="product?.mainImage" class="imgcart">
+                </div>
+                <div class="col-8">
+                    <p class="highboot">{{product?.name}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+
+        </div>
+        <div class="col-2">
+            <p class="highboot">{{product?.quantity}}</p>
+        </div>
+        <div class="col-2">
+
+        </div>
+        <div class="col-2">
+            <p class="highbootprice">{{product?.price}}</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="container">
+    <div class="row" style="width:100%;">
+        <div class="col-4">
+
+        </div>
+        <div class="col-2">
+
+        </div>
+        <div class="col-2">
+
+        </div>
+        <div class="col-2">
+            <p class="highboot1">Total</p>
+        </div>
+        <div class="col-2">
+            <p class="highbootprice1">{{getTotalPrice(order?.products)}}</p>
+        </div>
+    </div>
+</div>
+
+
+
+<p class="lastall"></p>

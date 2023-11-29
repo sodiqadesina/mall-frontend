@@ -1,0 +1,523 @@
+.secondnav{
+    display:none;
+}
+
+.nav{
+    background: #F3EDDD;
+}
+
+.navbar-nav .two{
+    margin-left:8%;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 15px;
+    color: #333333;
+}
+
+.nav-name{
+    margin-left:19%;
+    font-family: Pacifico;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;  
+    padding-top:10px;
+    color: #333333;
+}
+
+.all{
+    margin-left:11%;
+}
+
+.navbar-nav .one{
+    margin-left:6%;
+    font-family: Lato;
+font-style: normal;
+font-weight: 900;
+font-size: 15px;
+color: #333333;
+}
+
+.all1{
+    margin-left:5%;
+}
+
+.navbar-nav .nav-link:hover{
+border-bottom:2.5px #1775A3 solid;
+border-radius: 2px;
+}
+
+.img5{
+    height:240px;
+    width:130%;
+    }
+    
+    .h4one{
+        text-align: center;
+        margin-top:56px;
+        font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    color:#DB4343;
+    }
+    
+    .smallthree{
+        display:none;
+    }
+    
+    .btn4{
+        margin-top:5%;
+        outline:0;
+        border:none;
+        padding:5px 55px;
+        color:white;
+        margin-left:32%;
+        background-color:#1775A3;
+        border-radius: 3px;
+        font-family: Lato;
+     font-style: normal;
+     font-weight: bold;
+    }
+    
+    .img6{
+        height:240px;
+        width:100%;  
+    }
+    
+    .smallfour{
+        display:none;
+    }
+
+    .smallfour{
+        display:none;
+    }
+    
+    .ptwo{
+        font-family: Pacifico;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    color: #333333;
+    }
+    
+    .pthree{
+        margin-top:15%;
+    }
+    
+    .pfour{
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        color: #333333; 
+    }
+    
+    .foot{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: #333333;
+    }
+    
+    .pfive{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333333;
+    }
+    
+    .smallfive{
+        display:none;
+    }
+
+    .shopping{
+        margin-top:6%;
+        font-family: Lato;
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+margin-left:6%;
+color: #333333;
+    }
+
+    .allitems{
+        font-family: Lato;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+color: #333333;
+    }
+
+  .allrow{
+      border-bottom:3px solid #F3EDDD;
+      margin-top:3%;
+  }
+
+  .imgcart{
+      height:49.87px;
+  }
+
+  .highboot{
+      margin-top:9%;
+      font-family: Lato;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+color: #333333;
+  }
+
+  .highboot1{
+    margin-top:100;
+    font-family: Lato;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+color: #333333;
+}
+
+
+
+  .highbootprice{
+    margin-top:9%;
+    font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 17px;
+color: #333333;
+}
+
+.highbootprice1{
+    margin-top:100;
+    font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 17px;
+color: #333333;
+}
+
+  .imgcart2{
+    margin-top:9%;
+    width:50%;
+  }
+
+ 
+ .lastall{
+     margin-top:90;
+ }
+
+ .successful{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #333333;
+    margin-top:100px;
+    text-align: center;
+ }
+
+
+.thanks{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #333333;
+    text-align: center;
+    margin-top:14;
+}
+
+.id{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #333333;
+    margin-left:30%;
+    margin-top:18;
+}
+
+
+.code{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    color: #333333;
+    margin-top:28;
+    margin-left:30%;
+}
+
+.first{
+    margin-top:108;
+}
+
+@media (max-width: 576px) {
+    .navbar-brand{
+        font-family: Pacifico;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;  
+    padding-top:10px;
+    color: #333333;
+ }
+    
+    .firstnav{
+        display:none;
+    }
+
+    .secondnav{
+        display:block;
+    }
+
+    .secondone{
+        margin-left:70%;
+    font-family: Lato;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+color: #333333;
+    }
+
+    .four{
+        display:none;
+    }
+    
+    .smallfour{
+        display:block;
+    }
+    
+    .img10{
+        width: 70px;
+    height: 150px;
+    margin-top:10%;
+    }
+    
+    .img11{
+        width: 70px;
+    height: 150px;
+    margin-top:10%; 
+    }
+        
+    
+    .h4two{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    color: #DB4343;
+    margin-top:20%;
+    text-align:center;
+    }
+    
+    .btn8{
+        color:white;
+        background: #1775A3;
+    border-radius: 4px;
+    padding:4px 30px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    margin-top:10%;
+    margin-left:8%;
+    }
+
+    .shopping{
+        margin-top:6%;
+font-size: 16px;
+margin-left:3%;
+
+    }
+
+    .allitems{
+        font-family: Lato;
+font-style: normal;
+font-weight: 500;
+font-size: 10px;
+color: #333333;
+    }
+
+  .allrow{
+      border-bottom:3px solid #F3EDDD;
+      margin-top:5%;
+  }
+
+  .imgcart{
+      width:32;
+      height:40;
+  }
+
+  .highboot{
+      margin-top:9%;
+      font-size:11px;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      color: #333333;
+  }
+
+ 
+  .highbootprice{
+    margin-top:9%;
+    font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 11px;
+color: #333333;
+}
+
+  .imgcart2{
+    margin-top:9%;
+    width:50%;
+  }
+
+  .highboot1{
+    margin-top:57;
+    font-family: Lato;
+font-style: normal;
+font-weight: normal;
+font-size: 17px;
+color: #333333;
+}
+
+.highbootprice1{
+    margin-top:57;
+    font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 17px;
+color: #333333;
+}
+
+  .imgcart2{
+    margin-top:9%;
+    width:50%;
+  }
+
+  .successful{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    color: #333333;
+    margin-top:40;
+    text-align: center;
+ }
+
+
+.thanks{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #333333;
+    text-align: center;
+    margin-top:14;
+}
+
+.id{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #333333;
+    margin-left:3%;
+    margin-top:1;
+}
+
+
+.code{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333333;
+    margin-top:28;
+    margin-left:3%;
+}
+
+.first{
+    margin-top:58;
+}
+}
+
+@media (max-width: 802px) {
+    .navbar-brand{
+        font-family: Pacifico;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;  
+    padding-top:10px;
+    color: #333333;
+    }
+    
+    .firstnav{
+        display:none;
+    }
+
+    .secondnav{
+        display:block;
+    }
+
+    .secondone{
+     margin-left:77%;
+     font-family: Lato;
+     font-style: normal;
+     font-weight: 600;
+     font-size: 15px;
+     color: #333333;
+    }
+
+    .five{
+        display: none;
+    }
+    
+    .smallfive{
+        display:block;
+    }
+    
+    .psix{
+        font-family: Pacifico;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        color: #333333;
+    }
+    
+    .pseven{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    color: #333333;
+    margin-top:8%;
+    }
+    
+    .peight{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    color: #333333;
+    }
+    
+    .pnine{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    color: #333333;
+    }
+    
+    .pten{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: #333333;
+    }
+
+}

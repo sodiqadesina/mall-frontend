@@ -1,0 +1,224 @@
+.secondnav{
+    display:none;
+}
+
+.nav{
+    background: #F3EDDD;
+}
+
+.navbar-nav .two{
+    margin-left:8%;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 15px;
+    color: #333333;
+}
+
+.nav-name{
+    margin-left:19%;
+    font-family: Pacifico;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;  
+    padding-top:10px;
+    color: #333333;
+}
+
+.all{
+    margin-left:11%;
+}
+
+.navbar-nav .one{
+    margin-left:6%;
+    font-family: Lato;
+font-style: normal;
+font-weight: 900;
+font-size: 15px;
+color: #333333;
+}
+
+.all1{
+    margin-left:5%;
+}
+
+/* .navbar-nav .nav-link:hover{
+border-bottom:2.5px #1775A3 solid;
+border-radius: 2px;
+} */
+#auth:hover {
+    border-bottom:2.5px #1775A3 solid;
+    border-radius: 2px;
+}
+#logout:hover {
+    border-bottom:2.5px red solid;
+    border-radius: 2px;
+}
+.active{
+    border-bottom:2.5px #1775A3 solid;
+    border-radius: 2px;
+}
+    
+    .smallfour{
+        display:none;
+    }
+
+    .smallfour{
+        display:none;
+    }
+    
+    .ptwo{
+        font-family: Pacifico;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    color: #333333;
+    }
+    
+    .pthree{
+        margin-top:15%;
+    }
+    
+    .pfour{
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15px;
+        color: #333333; 
+    }
+    
+    .foot{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: #333333;
+    }
+    
+    .pfive{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333333;
+    }
+    
+    .smallfive{
+        display:none;
+    }
+
+
+@media (max-width: 576px) {
+    .navbar-brand{
+        font-family: Pacifico;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;  
+    padding-top:10px;
+    color: #333333;
+    }
+    
+    .firstnav{
+        display:none;
+    }
+
+    .secondnav{
+        display:block;
+    }
+
+    .secondone{
+        margin-left:70%;
+    font-family: Lato;
+font-style: normal;
+font-weight: 600;
+font-size: 15px;
+color: #333333;
+    }
+
+    .four{
+        display:none;
+    }
+    
+    .smallfour{
+        display:block;
+    }
+    
+    
+}
+
+@media (max-width: 802px) {
+    .navbar-brand{
+        font-family: Pacifico;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;  
+    padding-top:10px;
+    color: #333333;
+    }
+    
+    .firstnav{
+        display:none;
+    }
+
+    .secondnav{
+        display:block;
+    }
+
+    .secondone{
+     margin-left:77%;
+     font-family: Lato;
+     font-style: normal;
+     font-weight: 600;
+     font-size: 15px;
+     color: #333333;
+    }
+
+    .five{
+        display: none;
+    }
+    
+    .smallfive{
+        display:block;
+    }
+    
+    .psix{
+        font-family: Pacifico;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        color: #333333;
+    }
+    
+    .pseven{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    color: #333333;
+    margin-top:8%;
+    }
+    
+    .peight{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    color: #333333;
+    }
+    
+    .pnine{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    color: #333333;
+    }
+    
+    .pten{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: #333333;
+    }
+}

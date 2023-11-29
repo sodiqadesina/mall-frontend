@@ -1,0 +1,129 @@
+
+    <div class="firstnav fixed-top" style="width:100%;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav all1">
+              <a class="nav-item nav-link two" routerLink="/customer/main/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}">Home</a>
+              <a class="nav-item nav-link two" routerLink="/customer/main/about"routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}" >About</a>
+              <a class="nav-item nav-link two" routerLink="/customer/main/products"routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}">ShopProducts</a>
+            </div>
+            <h6 class="nav-name">STUDENT NEEDS</h6>
+            <div class="navbar-nav all">
+              <a  class="nav-item nav-link one" routerLink="/customer/main/cart"routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}">Cart({{carts.length}})</a>
+              <a *ngIf="!userIsAuthenticated" id="auth" class="nav-item nav-link one" routerLink="/login"routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}">Login</a>
+              <a *ngIf="!userIsAuthenticated" id="auth" class="nav-item nav-link one" routerLink="/sign-up"routerLinkActive="active"[routerLinkActiveOptions]="{exact:
+                true}">SignUp</a>
+                <a *ngIf="userIsAuthenticated" class="nav-item nav-link one" routerLink="/customer/main/checkout"routerLinkActive="active"[routerLinkActiveOptions]="{exact:
+                  true}">Profile</a>
+                  <a *ngIf="userIsAuthenticated" class="nav-item nav-link one" routerLink="/customer/main/order-page"routerLinkActive="active"[routerLinkActiveOptions]="{exact:
+                    true}">Orders</a>
+              <a *ngIf="userIsAuthenticated" class="nav-item nav-link one" id="logout" (click)="onLogout()" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}">Logout</a>
+              </div>
+          </div>
+        </nav>
+      </div>
+      
+      <div class="secondnav" style="width:100%;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">STUDENT NEEDS</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav smallnav">
+              <a class="nav-item nav-link secondone" routerLink="/customer/main/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}">Home</a>
+              <a class="nav-item nav-link secondone" routerLink="/customer/main/about"routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}">About</a>
+              <a class="nav-item nav-link secondone" routerLink="/customer/main/products"routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}">Shop Products</a>
+              <a *ngIf="!userIsAuthenticated" class="nav-item nav-link secondone" routerLink="/login"routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}">Login</a>
+              <a *ngIf="!userIsAuthenticated" class="nav-item nav-link secondone" routerLink="/sign-up"routerLinkActive="active"[routerLinkActiveOptions]="{exact:
+                true}">SignUp</a>
+              <a *ngIf="userIsAuthenticated" class="nav-item nav-link secondone" routerLink="/customer/main/cart"routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}">Cart</a>
+              <a *ngIf="userIsAuthenticated" class="nav-item nav-link secondone" routerLink="/customer/main/checkout"routerLinkActive="active"[routerLinkActiveOptions]="{exact:
+                true}">Profile</a>
+                <a *ngIf="userIsAuthenticated" class="nav-item nav-link secondone" routerLink="/customer/main/order-page"routerLinkActive="active"[routerLinkActiveOptions]="{exact:
+                  true}">orders</a>
+              <a *ngIf="userIsAuthenticated" class="nav-item nav-link secondone" id="logout" (click)="onLogout()" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}">Logout</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <router-outlet></router-outlet>
+
+    <section class="five" style="background: #F3EDDD;">
+      <div class="container">
+      <div class="row" style="width:100%;">
+        <div class="col-4 foot" style="margin-top:8%;">
+          <p class="ptwo">STUDENT NEEDS</p>
+          <p class="pthree">Address:</p>
+          <p>Afe Babalola University, Ado-Ekiti.</p>
+        </div>
+        <div class="col-3 foot" style="margin-top:8%;">
+          <p class="pfour">Our store</p>
+          <p class="pthree">Home</p>
+          <p>About</p>
+          <p>Shop Products</p>
+          <p>Cart</p>
+          <p>Checkout</p>
+          <p>Contact</p>
+        </div>
+        <div class="col-3 foot" style="margin-top:8%;">
+          <p class="pfour">Information</p>
+          <p class="pthree">Privacy Policy</p>
+          <p>Terms and Conditions</p>
+        </div>
+        <div class="col-2 foot" style="margin-top:8%;">
+          <p class="pfive">Follow Us</p>
+          <span> <img src="assets/images/Group 39.png" style="width:30; height:30;"> <img src="assets/images/Group 38.png" style="width:30; height:30;margin-left:6%;" ></span>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  <section class="smallfive" style="background: #F3EDDD;width:100%">
+    <div class="footer" style="width:100%;">
+      <div class="container">
+        <div class="row" style="width:100%;">
+          <div class="col-4" style="margin-top:8%;">
+            <p class="psix">STUDENT NEEDS</p>
+          <p class="pseven">Address:</p>
+          <p class="peight">Afe Babalola University, Ado-Ekiti.</p>
+          <p class="pten">Follow Us</p>
+         <span> <img src="assets/images/Group 39.png" style="width:20; height:20;"> <img src="assets/images/Group 38.png" style="width:20; height:20;" ></span>
+          </div>
+          <div class="col-4" style="margin-top:8%;">
+            <p class="pnine">Our store</p>
+          <p class="peight">Home</p>
+          <p class="peight">About</p>
+          <p class="peight">Shop Products</p>
+          <p class="peight">Cart</p>
+          <p class="peight">Checkout</p>
+          <p class="peight">Contact</p>
+          </div>
+          <div class="col-4" style="margin-top:8%;">
+            <p class="pnine">Information</p>
+            <p class="peight">Privacy Policy</p>
+            <p class="peight">Terms and 
+              Conditions</p>
+          </div>
+          </div>
+      </div>
+    </div>     
+  </section>
+
+ 

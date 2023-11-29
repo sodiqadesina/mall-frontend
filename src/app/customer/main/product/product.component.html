@@ -1,0 +1,62 @@
+<section class="four mt-5" style="background: #D9DCF8;width:100%;">
+    <div class="row rowfour" style="width:100%;background: #D9DCF8;width:100%;">
+      <div class="col-3">
+        <img src="assets/shop product/shoe.png" class="img5">
+      </div>
+      <div class="col-6">
+      <h4 class="h4one">Get 10% Discount on First Order</h4>
+      <button class="btn4">SHOP NOW</button>
+      </div>
+      <div class="col-3">
+        <img src="assets/shop product/shirt.png" class="img6">
+      </div>
+    </div>
+  </section>
+
+  <section class="smallfour" style="background: #D9DCF8;width:100%;">
+    <div class="row smallrowfour" style="width:100%;background: #D9DCF8;">
+      <div class="col-3">
+        <img src="assets/shop product/shoe1.png" class="img10">
+      </div>
+      <div class="col-6">
+      <h4 class="h4two">Get 10% Discount on First Order</h4>
+      <button class="btn8">SHOP NOW</button>
+      </div>
+      <div class="col-3">
+        <img src="assets/shop product/shirt(1).png" class="img11">
+      </div>
+    </div>
+  </section>
+
+  <section id="one" style="width:100%;">
+    <div class="container">
+      <div class="row row1" style="width:100%;">
+        <div class="col-2">
+          <a routerLink="/customer/main/products/"><h6 class="everi" [ngClass]="{'cat-border': !pageCategory}">All</h6> </a>
+        </div>
+        <div class="col-2" *ngFor="let category of categories">
+        <a routerLink="/customer/main/products/{{category._id}}"><h6 class="everi"[ngClass]="{'cat-border': category._id === pageCategory}" >{{category?.name}}</h6></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="smallone">
+    <div class="container">
+      <div class="row smallrow1">
+        <div class="col-4">
+          <h6 routerLink="/customer/main/products/" [ngClass]="{'cat-border': !pageCategory}">All</h6>
+        </div>
+        <div class="col-4" *ngFor="let category of categories">
+          <h6 class="smalleveri" routerLink="/customer/main/products/{{category._id}}" [ngClass]="{'cat-border': category._id === pageCategory}">{{category?.name}}</h6>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <router-outlet></router-outlet>
+
+
+

@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background: #f3eddd">
+  <a class="navbar-brand" href="#">STUDENT NEEDS</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link linky" routerLink="/customer/main/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link linky1" routerLink="/login" style="color: #1775a3"
+          >LOG<span> IN</span></a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="small">
+  <div class="container">
+    <div class="row" style="background: #f3eddd; width: 110%">
+      <div class="col-6">
+        <p class="navbar-brand">STUDENT NEEDS</p>
+      </div>
+      <div class="col-3">
+        <p routerLink="/customer/main/" class="ok">Home</p>
+      </div>
+      <div class="col-3">
+        <p routerLink="/login" class="ok1">LOG IN</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="signup">
+    <p style="color: #f3eddd">.</p>
+    <h6 class="h6one">SIGN UP</h6>
+    <p class="pone">Sign up to get started</p>
+    <form class="formy" [formGroup]="form" (ngSubmit)="onRegister()">
+      <label for="name">Name</label>
+      <br />
+      <input class="input1" type="text" formControlName="name" />
+      <br />
+      <label for="email">Email</label>
+      <br />
+      <input
+        class="input2"
+        type="text"
+        formControlName="email"
+      />
+      <br />
+      <label for="password">Password</label>
+      <br />
+      <input class="input3" [type]="fieldTextType ? 'text' : 'password'" formControlName="Password" />
+      <i
+        class="fa"
+        [ngClass]="{
+          'fa-eye-slash': fieldTextType,
+          'fa-eye': !fieldTextType
+        }"
+        (click)="toggleFieldTextType()"
+        aria-hidden="true"
+      ></i>
+      <button class="btn1">SIGN UP</button>
+    </form>
+    <p class="ptwo">
+      Already have a profile?<span class="one" style="color: #1775a3">
+        Log in</span
+      >
+    </p>
+  </div>
+</div>

@@ -1,0 +1,449 @@
+/*   Side Nav */
+.small{
+    display:none;
+}
+
+.another{
+    margin-top:150%;
+}
+
+
+.stu{
+    margin-top:64;
+    color:#F3EDDD;
+}
+
+.student{
+    font-family: Pacifico;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+color: #333333;
+margin-left:10%;
+}
+
+.firstIcon{
+margin-left:40%;
+
+}
+
+.dashboard{
+    font-family: Lato;
+font-style: normal;
+font-weight: 500;
+font-size: 17px;
+color: #333333;
+}
+
+
+.secondIcon{
+    margin-left:40%;
+    
+    }
+    
+    .dashboard1{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    color: #1775A3;
+    }
+/*END PART */
+
+.inp{
+    background: #F5F1E4;
+    box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+    border-radius: 20px;
+    padding:5px;
+    width:90%;
+    outline:0;
+    border:0;
+}
+.inp::placeholder{
+    font-family: Lato;
+font-style: normal;
+font-weight: 500;
+color: #666666;
+}
+
+.search{
+    margin-left:-10%;
+}
+
+.bell{
+    width:20%;
+}
+
+.nom{
+    background: #F3EDDD;
+box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+border-radius: 4px;
+width:100%;
+height:100%;
+}
+
+
+.number{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+ text-align: center;
+    color: #1775A3;
+  
+}
+
+.product{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    color: #444444;
+    margin-top:19;
+}
+
+.allproduct{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333333;
+}
+
+.allproductdiv{
+    background: #F3EDDD;
+    box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+    border-radius: 4px;
+    width:100%;
+    height:310px;
+}
+
+.img1{
+width:90%;
+}
+
+.kia{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #333333;
+}
+
+.price{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333333;
+}
+
+.orders{
+    margin-top:65;
+    font-family: Lato;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+color: #333333;
+}
+
+.ordersdiv{
+    width: 100%;
+height: 356px;
+
+background: #F3EDDD;
+box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+border-radius: 4px;
+}
+
+.delivered{
+    font-family: Lato;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+color: #1775A3;
+}
+
+
+
+
+
+
+
+
+    @media (max-width: 576px) {
+/*   Side Nav */
+.big{
+    display:none;
+}
+
+.small{
+    display:block;
+}
+
+.stu{
+    margin-top:24;
+    color:#F3EDDD;
+}
+
+.student{
+    font-family: Pacifico;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+color: #333333;
+margin-left:10%;
+}
+
+.firstIcon{
+margin-left:40%;
+width:20;
+}
+
+.dashboard{
+    font-family: Lato;
+font-style: normal;
+font-weight: 500;
+font-size: 13px;
+color: #333333;
+}
+
+
+.secondIcon{
+    margin-left:40%;
+    width:20;
+    }
+    
+    .dashboard1{
+        font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    color: #1775A3;
+    }
+
+  
+
+.another1{
+    margin-top:420%;
+}
+  /*END PART */
+.smallinp{
+    background: #F5F1E4;
+    box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+    border-radius: 8px;
+    padding:5px;
+    width:95.9%;
+    outline:0;
+    border:0;
+}
+
+.smallinp::placeholder{
+    font-family: Lato;
+font-style: normal;
+font-weight: 500;
+color: #666666;
+}
+
+
+.smallsearch{
+    margin-left:-20%;
+}
+
+.smallbell{
+width:20;
+margin-left:30%;
+}
+
+
+
+.smallnom{
+    background: #F3EDDD;
+box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+border-radius: 4px;
+width:76;
+height:100%;
+}
+
+
+.smallnumber{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+ text-align: center;
+    color: #1775A3;
+  
+}
+
+.smallproduct{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+    color: #444444;
+    margin-top:5;
+}
+
+
+.product{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    color: #444444;
+    margin-top:5;
+}
+
+.allproduct{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333333;
+    padding-left:10px;
+}
+
+.allproductdiv{
+    background: #F3EDDD;
+    box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+    border-radius: 4px;
+    width:100%;
+    height:310px;
+
+}
+
+.img1{
+width:90%;
+}
+
+.kia{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: #333333;
+}
+
+.price{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    color: #333333;
+}
+
+
+
+    }
+
+  
+    @media (max-width: 802px) {
+        .inp{
+            background: #F5F1E4;
+            box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+            border-radius: 20px;
+            padding:5px;
+            outline:0;
+            border:0;
+        }
+        .inp::placeholder{
+            font-family: Lato;
+        font-style: normal;
+        font-weight: 500;
+        color: #666666;
+        }
+        
+        .search{
+            margin-left:-14%;
+        }
+
+        
+.nom{
+    background: #F3EDDD;
+box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+border-radius: 4px;
+width:120%;
+height:100%;
+}
+
+.allproductdiv{
+    background: #F3EDDD;
+    box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+    border-radius: 4px;
+    width:110%;
+    height:330px;
+}
+
+.img1{
+    width:20;
+    }
+
+    .delivered{
+        font-size:12px;
+    }
+    
+    .ordersdiv{
+        width: 100%;
+    height: 32%;
+    
+    background: #F3EDDD;
+    box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+    border-radius: 4px;
+    }
+
+
+        
+    
+    }
+
+
+    @media (max-width: 1024px) {
+
+        .another{
+            margin-top:300%;
+        }
+
+        .inp{
+            background: #F5F1E4;
+            box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+            border-radius: 20px;
+            padding:5px 10px;
+            outline:0;
+            border:0;
+        }
+        .inp::placeholder{
+            font-family: Lato;
+        font-style: normal;
+        font-weight: 500;
+        color: #666666;
+        }
+        
+        .search{
+            margin-left:-14%;
+        }
+
+        .bell{
+            width:25%;
+        }
+
+        .delivered{
+            font-size:12px;
+        }
+        
+        .ordersdiv{
+            width: 100%;
+        height: 32%;
+        
+        background: #F3EDDD;
+        box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+        border-radius: 4px;
+        }
+
+     
+            
+
+    }

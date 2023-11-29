@@ -1,0 +1,108 @@
+<section id="two" style="width:100%;">
+  <div class="container">
+    <div class="row row1" style="width:100%;">
+      <div class="col-4 mt-5" *ngFor="let product of products">
+        <img routerLink="/customer/main/product/{{product?.slug}}" [src]="product?.mainImage" class="img12">
+        <h6 class="h6two">{{product?.name}}</h6>
+        <h6 class="h6three">{{product?.price| currency:'₦':'symbol-narrow'}}</h6>
+        <button class="btn3" (click)="addToCart(product, 1)">ADD TO CART</button>
+      </div>
+    </div>
+
+    <!-- <div class="row row1" style="width:100%;">
+      <div class="col-4">
+        <img src="assets/shop product/Rectangle 13.png" class="img12">
+        <h6 class="h6two">Jordans 1 Retro</h6>
+        <h6 class="h6three">N10,000</h6>
+        <button class="btn3">ADD TO CART</button>
+      </div>
+      <div class="col-4">
+        <img src="assets/shop product/Rectangle 17.png" class="img12">
+        <h6 class="h6two">French Girl Body Silk</h6>
+        <h6 class="h6three">N4,000</h6>
+        <button class="btn3">ADD TO CART</button>
+      </div>
+      <div class="col-4">
+        <img src="assets/shop product/Rectangle 18.png" class="img12">
+        <h6 class="h6two">Dove Body Lotion</h6>
+        <h6 class="h6three">N2,000</h6>
+        <button class="btn3">ADD TO CART</button>
+      </div>
+    </div>
+
+    <div class="row row1" style="width:100%;">
+      <div class="col-4">
+        <img src="assets/shop product/Rectangle 30.png" class="img12">
+        <h6 class="h6two">OXFORD</h6>
+        <h6 class="h6three">N15,000</h6>
+        <button class="btn3">ADD TO CART</button>
+      </div>
+      <div class="col-4">
+        <img src="assets/shop product/Rectangle 32.png" class="img12">
+        <h6 class="h6two">Cat eye glasses</h6>
+        <h6 class="h6three">N4,500</h6>
+        <button class="btn3">ADD TO CART</button>
+      </div>
+      <div class="col-4">
+        <img src="assets/shop product/Rectangle 33.png" class="img12">
+        <h6 class="h6two">Transparent glasses</h6>
+        <h6 class="h6three">N6,000</h6>
+        <button class="btn3">ADD TO CART</button>
+      </div>
+    </div>
+
+    <div class="row row1" style="width:100%;">
+      <div class="col-4">
+        <img src="assets/shop product/Rectangle 36.png" class="img12">
+        <h6 class="h6two">Victoria Secret</h6>
+        <h6 class="h6three">N8,000</h6>
+        <button class="btn3">ADD TO CART</button>
+      </div>
+      <div class="col-4">
+        <img src="assets/shop product/Rectangle 38.png" class="img12">
+        <h6 class="h6two">Lancome</h6>
+        <h6 class="h6three">N14,500</h6>
+        <button class="btn3">ADD TO CART</button>
+      </div>
+      <div class="col-4">
+        <img src="assets/shop product/Rectangle 39.png" class="img12">
+        <h6 class="h6two">Kai Body Lotion</h6>
+        <h6 class="h6three">N6,000</h6>
+        <button class="btn3">ADD TO CART</button>
+      </div>
+    </div>
+
+    <div class="row row1" style="width:100%;">
+      <div class="col-4">
+        <img src="assets/shop product/Rectangle 42.png" class="img12">
+        <h6 class="h6two">Gold earrings</h6>
+        <h6 class="h6three">N1,000</h6>
+        <button class="btn3">ADD TO CART</button>
+      </div>
+      <div class="col-4">
+        <img src="assets/shop product/Rectangle 44.png" class="img12">
+        <h6 class="h6two">Pearl Hoops</h6>
+        <h6 class="h6three">N1,500</h6>
+        <button class="btn3">ADD TO CART</button>
+      </div>
+      <div class="col-4">
+        <img src="assets/shop product/Rectangle 45.png" class="img12">
+        <h6 class="h6two">Yellow Flats</h6>
+        <h6 class="h6three">N4,000</h6>
+        <button class="btn3">ADD TO CART</button>
+      </div>
+    </div> -->
+  </div>
+</section>
+<section id="two">
+  <div class="container">
+
+  <ul class="pagination pagination pag">
+    <li><a href="#"><img src="assets/shop product/Ellipse 4.png"></a></li>
+    <li><a href="#"><img src="assets/shop product/Ellipse 50.png"></a></li>
+    <li><a href="#"><img src="assets/shop product/Ellipse 50.png"></a></li>
+
+  </ul>
+  <p class="last"></p>
+  </div>
+</section>

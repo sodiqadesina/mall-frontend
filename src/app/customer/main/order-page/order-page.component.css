@@ -1,0 +1,17 @@
+.allproduct{
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    color: #333333;
+}
+
+.allproductdiv{
+    background: #F3EDDD;
+    box-shadow: 0px 4px 20px rgba(102, 102, 102, 0.1);
+    border-radius: 4px;
+    width:100%;
+}
+.img1{
+    width:90%;
+    }

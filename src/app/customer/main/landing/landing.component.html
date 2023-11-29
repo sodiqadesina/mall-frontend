@@ -1,0 +1,261 @@
+<section class="sectionone mt-5">
+  <div class="row" style="width:100%;">
+    <div class="col-sm-6" style="padding-left:6%;">
+      <h1 class="h1one">Shopping Made<span class="spanone"> Easy</span> </h1>
+      <p class="pone">We help you shop for items with ease and from the comfort of your home. Items are delivered to
+        your doorstep.</p>
+      <button class="btn1" routerLink="/customer/main/products">SHOP NOW</button>
+    </div>
+    <div class="col-sm-6">
+      <!-- <img class="img1" src="assets/images/Group 10.png" alt="img"> -->
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="assets/shop product/flower1.jpg" style="height:390" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="assets/shop product/flower2.jpg" style="height:390" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/assets/shop product/flower3.jpg" style="height:390" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!-- <img class="smallimg1" src="assets/images/smallone.png" alt="img"> -->
+      <p class="place">To place your advert here call 0803333767 </p>
+    </div>
+  </div>
+</section>
+
+<section class="sectiontwo">
+  <div class="container">
+    <div class="row row1" style="width:100%;">
+      <div class="col-4">
+        <div class="row" style="width:100%;">
+          <div class="col-3">
+            <img src="assets/images/fast-delivery (1) 1.png" class="img2">
+          </div>
+          <div class="col-9">
+            <h6 class="h3two">Fast Delivery</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="row" style="width:100%;">
+          <div class="col-3">
+            <img src="assets/images/credit-card (1) 1.png" class="img2">
+          </div>
+          <div class="col-9">
+            <h6 class="h3two">Secure Payment</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="row" style="width:100%;">
+          <div class="col-3">
+            <img src="assets/images/support 1.png" class="img2">
+          </div>
+          <div class="col-9">
+            <h6 class="h3two">Online Support</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="smallsectiontwo">
+  <div class="row" style="width:100%;">
+    <div class="col-6">
+      <div class="row" style="width:100%;margin-left:9%;">
+        <div class="col-3">
+          <img src="assets/images/fast-delivery (1) 1.png" class="smallimg2">
+        </div>
+        <div class="col-9">
+          <h6 class="smallh3two">Fast Delivery</h6>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-6">
+      <div class="row" style="width:100%; margin-left:-7%;">
+        <div class="col-3">
+          <img src="assets/images/credit-card (1) 1.png" class="smallimg2">
+        </div>
+        <div class="col-9">
+          <h6 class="smallh3twoone">Secure Payment</h6>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="width:100%;">
+    <div class="col-12">
+      <div class="row" style="width:100%;margin-top:2%;">
+        <div class="col-2">
+          <img src="assets/images/support 1.png" class="smallimg21">
+        </div>
+        <div class="col-10">
+          <h6 class="smallh3two" style="margin-left:40%">Online Support</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</section>
+
+
+<section class="three">
+  <div class="container">
+    <h5 class="h5one">Featured Products</h5>
+    <h6 class="h6one">{{category1?.name}}</h6>
+    <div  class="row" style="margin-top:3%;width:100%;">
+        <div  class="col-4 btnimg">
+          <img  [src]="productCat1?.mainImage" class="img3">
+          <button class="btn2" routerLink="/customer/main/products/{{category1?._id}}">SHOP NOW</button>
+        </div>
+      <div class="col-4" *ngFor="let product of landingCategories[category1?.name]?.slice(1)" >
+        <img routerLink="/customer/main/product/{{product?.slug}}" [src]="product?.mainImage" class="img4">
+        <h6 class="h6two">{{product?.name}}</h6>
+        <h6 class="h6three">{{product?.price | currency:'₦':'symbol-narrow'}}</h6>
+        <button class="btn3" (click)="addToCart(product, 1)">ADD TO CART</button>
+      </div>
+      <!-- <div class="col-4">
+        <img src="assets/images/Rectangle 7.png" class="img4">
+        <h6 class="h6two">Next Crop Top</h6>
+        <h6 class="h6three">N2,000</h6>
+        <button class="btn3">ADD TO CART</button>
+      </div> -->
+    </div>
+
+    <h6 class="h6four">{{category2?.name}}</h6>
+    <div class="row" style="margin-top:1%;width:100%;">
+      <div class="col-4" *ngFor="let product of landingCategories[category2?.name]?.slice(0,2)">
+        <img routerLink="/customer/main/product/{{product?.slug}}" [src]="product?.mainImage" class="img4">
+        <h6 class="h6two">{{product?.name}}</h6>
+        <h6 class="h6three">{{product?.price | currency:'₦':'symbol-narrow'}}</h6>
+        <button class="btn3" (click)="addToCart(product, 1)">ADD TO CART</button>
+      </div>
+      <!-- <div class="col-4">
+        <img src="assets/images/Rectangle 13.png" class="img4">
+        <h6 class="h6two">Jordans 1 Retro</h6>
+        <h6 class="h6three">N1,5000</h6>
+        <button class="btn3">ADD TO CART</button>
+      </div> -->
+      <div class="col-4 btnimg">
+        <img [src]="productCat2?.mainImage" [alt]="productCat2?.name" class="img3">
+        <button class="btn2" routerLink="/customer/main/products/{{category2?._id}}">SHOP NOW</button>
+      </div>
+    </div>
+
+    <h6 class="h6five">Other Products</h6>
+    <div class="row" style="margin-top:1%;width:100%;">
+      <div class="col-4 btnimg">
+        <img [src]="productCat3?.mainImage" class="img3">
+        <button class="btn2" routerLink="/customer/main/products">SHOP NOW</button>
+      </div>
+      <div class="col-4" *ngFor="let product of otherProducts?.slice(1)" >
+        <img routerLink="/customer/main/product/{{product?.slug}}" [src]="product?.mainImage" class="img4">
+        <h6 class="h6two">{{product?.name}}</h6>
+        <h6 class="h6three">{{product?.price | currency:'₦':'symbol-narrow'}}</h6>
+        <button class="btn3" (click)="addToCart(product, 1)">ADD TO CART</button>
+      </div>
+      <!-- <div class="col-4">
+        <img src="assets/images/Rectangle 18.png" class="img4">
+        <h6 class="h6two">Powerbank</h6>
+        <h6 class="h6three">N6,000</h6>
+        <button class="btn3">ADD TO CART</button>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<section class="smallthree">
+  <div class="container">
+    <h5 class="h5two">Featured Products</h5>
+    <h6 class="h6six">{{category1?.name}}</h6>
+    <img [src]="productCat1?.mainImage" class="img7">
+    <button class="btn5" routerLink="/customer/main/products/{{category1?._id}}">SHOP NOW</button>
+    <div class="row" style="width:100%;">
+      <div class="col-6" *ngFor="let product of landingCategories[category1?.name]?.slice(1)" >
+        <img routerLink="/customer/main/product/{{product?.slug}}" [src]="product?.mainImage" class="img8">
+        <h6 class="h6seven">{{product?.name}}</h6>
+        <h6 class="h6eight">{{product?.price | currency:'₦':'symbol-narrow'}}</h6>
+        <button class="btn6" (click)="addToCart(product, 1)">ADD TO CART</button>
+      </div>
+
+    </div>
+
+    <h6 class="h6nine">{{category2?.name}}</h6>
+    <img [src]="productCat2?.mainImage" [alt]="productCat2?.name" class="img7">
+    <button class="btn5" routerLink="/customer/main/products/{{category2?._id}}">SHOP NOW</button>
+    <div class="row" style="width:100%;">
+      <div class="col-6" *ngFor="let product of landingCategories[category2?.name]?.slice(0,2)">
+        <img routerLink="/customer/main/product/{{product?.slug}}" src="assets/images/Rectangle 151.png" class="img8">
+        <h6 class="h6seven">{{product?.name}}</h6>
+        <h6 class="h6eight">{{product?.}</h6>
+        <button class="btn6" (click)="addToCart(product, 1)">ADD TO CART</button>
+      </div>
+    </div>
+
+    <h6 class="h6nine">Other Products</h6>
+    <img [src]="productCat3?.mainImage" class="img7">
+    <button class="btn5" routerLink="/customer/main/products">SHOP NOW</button>
+    <div class="row" style="width:100%;">
+      <div class="col-6" *ngFor="let product of otherProducts?.slice(1)">
+        <img routerLink="/customer/main/product/{{product?.slug}}"  [src]="product?.mainImage" class="img8">
+        <h6 class="h6seven">{{product?.name}}</h6>
+        <h6 class="h6eight">{{product?.price | currency:'₦':'symbol-narrow'}}</h6>
+        <button class="btn6" (click)="addToCart(product, 1)">ADD TO CART</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="four" style="background: #D9DCF8;">
+  <div class="row rowfour" style="width:100%;background: #D9DCF8;margin-top:7%;width:100%;">
+    <div class="col-3">
+      <img src="assets/images/shoe.png" class="img5">
+    </div>
+    <div class="col-6">
+      <h4 class="h4one">Get 10% Discount on First Order</h4>
+      <button class="btn4" routerLink="/customer/main/products">SHOP NOW</button>
+    </div>
+    <div class="col-3">
+      <img src="assets/images/shirt.png" class="img6">
+    </div>
+  </div>
+</section>
+
+<section class="smallfour" style="background: #D9DCF8;">
+  <div class="row smallrowfour" style="width:100%;background: #D9DCF8;margin-top:7%;">
+    <div class="col-3">
+      <img src="assets/images/shoe1.png" class="img10">
+    </div>
+    <div class="col-6">
+      <h4 class="h4two">Get 10% Discount on First Order</h4>
+      <button class="btn8" routerLink="/customer/main/products">SHOP NOW</button>
+    </div>
+    <div class="col-3">
+      <img src="assets/images/shirt(1).png" class="img11">
+    </div>
+  </div>
+</section>

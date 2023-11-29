@@ -1,0 +1,237 @@
+<div class="big">
+    <div class="container">
+        <div class="row" style="width:100%;margin-top:70;">
+            <div class="col-4">
+                <h6 class="Products">Categories</h6>
+            </div>
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+                <button class="addproducts" data-toggle="modal" data-target="#exampleModalCenter">ADD CATEGORY</button>
+
+                <!-- Button trigger modal -->
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <form #categoryForm="ngForm" (ngSubmit)="categoryForm.form.valid && addCategory(categoryForm)" style="margin-top:6%;">
+                                    <label class="productname" type="text">Category Name</label>
+                                    <br />
+                                    <input class="input1" name="catName" ngModel required>
+                                    <label class="productname" type="text">Description</label>
+                                    <br />
+                                    <input class="input1" name="catDesc" ngModel>
+                                    <button class="lastadd">ADD CATEGORY</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="viewitem">View All</div>
+        <div class="ano" *ngFor="let category of categories; let i = index;">
+            <div class="row" style="margin-top:11;">
+                <div class="col-10">
+                    <p class="anokia">{{category?.name}}</p>
+                </div>
+                <div class="col-1">
+                    <img data-toggle="modal" [attr.data-target]="'#EditModal'+i" src="assets/images/Vector (2).png"
+                        class="imgpic1">
+                </div>
+                <div class="col-1">
+                    <img data-toggle="modal" data-target="#DeleteModal" src="assets/images/Vector (3).png"
+                        class="imgpic1">
+                </div>
+            </div>
+            <div class="modal fade" [id]="'EditModal'+i" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <form #editCategoryForm="ngForm" (ngSubmit)="editCategoryForm.form.valid && onSubmit(editCategoryForm, category?._id, i)" style="margin-top:6%;">
+                                <label class="productname" type="text">Category Name</label>
+                                <br />
+                                <input class="input1" #catName="ngModel" [(ngModel)]="category.name" name="catName" required>
+                                <button type="submit" class="lastadd">UPDATE CATEGORY</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <p style="font-weight: bold; font-size: 25px;" class=" mt-5 text-center">Are you Sure you want to
+                                DELETE</p>
+                            <div class="d-flex justify-content-center mb-5">
+                                <button data-dismiss="modal" type="button" class="btn btn-success mx-1">CANCEL</button>
+                                <button type="button" class="btn btn-danger mx-1">DELETE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="float-right my-5 mr-3">
+            <button type="button" [disabled]="!this.prev" class="btn btn-danger m-1" (click)="onPrev()">Prev</button>
+            <button type="button"[disabled]="!this.next" class="btn btn-success" (click)="onNext()">Next</button>
+      
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+    <div class="small">
+        <div class="container">
+            <div class="row" style="width:100%;margin-top:70;">
+                <div class="col-6">
+                    <h6 class="Products">Categories</h6>
+                </div>
+
+                <div class="col-6">
+                    <button class="smalladdproducts" data-toggle="modal" data-target="#smallexampleModalCenter">ADD
+                        CATEGORY</button>
+                </div>
+                <div class="modal fade" id="smallexampleModalCenter" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <form style="margin-top:6%;">
+                                    <label class="productname" type="text">Category Name</label>
+                                    <br />
+                                    <input class="input1">
+                                </form>
+                                <button class="lastadd">ADD CATEGORY</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="smallviewitem">View All</div>
+            <div class="ano">
+                <div class="row" style="margin-top:11;">
+                    <div class="col-6">
+                        <p class="smallanokia">All</p>
+                    </div>
+                    <div class="col-3">
+                        <img src="assets/images/Vector (2).png" class="imgpic1">
+                    </div>
+                    <div class="col-3">
+                        <img src="assets/images/Vector (3).png" class="imgpic1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="ano">
+                <div class="row" style="margin-top:11;">
+                    <div class="col-6">
+                        <p class="smallanokia">Clothes</p>
+                    </div>
+                    <div class="col-3">
+                        <img src="assets/images/Vector (2).png" class="imgpic1">
+                    </div>
+                    <div class="col-3">
+                        <img src="assets/images/Vector (3).png" class="imgpic1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="ano">
+                <div class="row" style="margin-top:11;">
+                    <div class="col-6">
+                        <p class="smallanokia">Shoes</p>
+                    </div>
+                    <div class="col-3">
+                        <img src="assets/images/Vector (2).png" class="imgpic1">
+                    </div>
+                    <div class="col-3">
+                        <img src="assets/images/Vector (3).png" class="imgpic1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="ano">
+                <div class="row" style="margin-top:11;">
+                    <div class="col-6">
+                        <p class="smallanokia">Perfumes</p>
+                    </div>
+                    <div class="col-3">
+                        <img src="assets/images/Vector (2).png" class="imgpic1">
+                    </div>
+                    <div class="col-3">
+                        <img src="assets/images/Vector (3).png" class="imgpic1">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="ano">
+                <div class="row" style="margin-top:11;">
+                    <div class="col-6">
+                        <p class="smallanokia">Lotion</p>
+                    </div>
+                    <div class="col-3">
+                        <img src="assets/images/Vector (2).png" class="imgpic1">
+                    </div>
+                    <div class="col-3">
+                        <img src="assets/images/Vector (3).png" class="imgpic1">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="ano">
+                <div class="row" style="margin-top:11;">
+                    <div class="col-6">
+                        <p class="smallanokia">Accessories</p>
+                    </div>
+                    <div class="col-3">
+                        <img src="assets/images/Vector (2).png" class="imgpic1">
+                    </div>
+                    <div class="col-3">
+                        <img src="assets/images/Vector (3).png" class="imgpic1">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>

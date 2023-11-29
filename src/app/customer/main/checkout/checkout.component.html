@@ -1,0 +1,29 @@
+<div class="container">
+  <h5 class="profile">Profile</h5>
+  <div class="image">
+  <img src="assets/shop product/cameray.png" class="profileimg">
+</div>
+  
+  <form class="profileform"#EditAccountForm="ngForm" (ngSubmit)="EditAccountForm.form.valid && onEdit(EditAccountForm)" >
+    <label for="name">Name</label>
+    <br />
+    <input type="text"  #name="ngModel" [(ngModel)]="currentUser.name" name="name" required>
+    <br />
+  
+    <label for="number">Phone Number</label>
+    <br />
+    <input type="number" name="phone" #phone="ngModel"[(ngModel)]="currentUser.phone" min="11" >
+    <br />
+  
+    <label for="address">Billing Address</label>
+    <br />
+    <input type="address" name="billingAddress" #billingAddress="ngModel"[(ngModel)]="currentUser.billingAddress" minlength="11">
+    <br />
+    <button type="submit" class="save" [disabled]="loading">Save</button>
+  
+  </form>
+  
+  
+  <p class="allprofile"></p>
+  
+  </div>
